@@ -1,11 +1,10 @@
-import React from 'react'
+import React, { useContext } from "react";
+const AppContext= React.createContext();
+const AppProvider= ({children})=>{
+    return <AppContext.Provider value="abcD">{children}</AppContext.Provider>
 
-const context = () => {
-  return (
-    <div>
-       home
-    </div>
-  )
 }
-
-export default context
+const useGlobalContext=()=>{
+     return useContext(AppContext)
+}
+export {AppContext,AppProvider, useGlobalContext}
