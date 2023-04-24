@@ -31,11 +31,11 @@ const AppProvider= ({children})=>{
 
     };
     useEffect(()=>{
-        getMovies(`${API_URL}&s=${query}`);
-        //   let timer = setTimeout(()=>{
-        //     getMovies(`${API_URL}&s=${query}`);
-        //   },1000);
-        //  return ()=>clearTimeout(timer)
+    
+          let timer = setTimeout(()=>{
+            getMovies(`${API_URL}&s=${query}`);
+          },2000);
+         return ()=>clearTimeout(timer);
   
       
     },[query]);
