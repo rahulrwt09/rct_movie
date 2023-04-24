@@ -1,13 +1,14 @@
-import React, {useContext} from 'react'
-import { AppContext , useGlobalContext} from './context'
+import Search from "./Search"
+import Movie from "./Movie"
 
 const Home = () => {
-   const name=useGlobalContext(AppContext)
-   console.log(name)
+
+
     return (
    
    <>
-     <p>{name}</p>
+     <Search/>
+      <Movie/>
    </>
   )
 }
