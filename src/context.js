@@ -13,6 +13,7 @@ const AppProvider= ({children})=>{
         const data= await res.json()
         console.log(data)
         if(data.Response==='True'){
+            
             setmovie(data.Search);
             setload(false);
 
